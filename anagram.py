@@ -1,7 +1,10 @@
 import tkinter as tk
 
+__author__ = 'Marios Keri'
+__date__ = '12-03-2020'
 
-class Anagram():
+
+class Anagram:
     def __init__(self, str1, str2):
         self.str1 = str1.strip()
         self.str2 = str2.strip()
@@ -18,12 +21,10 @@ class Anagram():
             return 'Is not anagram'
 
 
-
-
 if __name__ == '__main__':
 
     master = tk.Tk()
-    master.geometry('500x500')
+    master.geometry('500x200')
 
     def make_inputs():
         tk.Label(master, text="word 1").grid(row=0, column=0)
@@ -44,7 +45,8 @@ if __name__ == '__main__':
 
 
     def make_button(entry_object_1, entry_object_2):
-        button = tk.Button(master, text='Show', command=lambda: make_display(entry_object_1.get(), entry_object_2.get()))
+        button = tk.Button(master, text='Show',\
+                           command=lambda: make_display(entry_object_1.get(), entry_object_2.get()))
         button.grid(row=3, column=2, sticky=tk.W, pady=4)
 
 
